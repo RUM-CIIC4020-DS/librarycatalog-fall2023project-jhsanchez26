@@ -58,7 +58,7 @@ public class Book {
 		 * Both the title and author are in uppercase.
 		 */
 		if (title != null && author != null) {
-			return title.toUpperCase() + " By " + author.toUpperCase();
+			return title.trim().toUpperCase() + " BY " + author.trim().toUpperCase();
 		} else {
 			return "Title or Author not available.";
 		}

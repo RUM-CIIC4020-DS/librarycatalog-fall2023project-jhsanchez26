@@ -104,20 +104,10 @@ public class LibraryCatalog {
 		book.setTitle(title);
 		book.setAuthor(author);
 		book.setGenre(genre);
-		book.setId(generateUniqueBookId());
+		book.setCheckedOut(false);
+		book.setLastCheckOut(LocalDate.of(2023, 9, 15));
+		book.setId(books.size()+1);
 		books.add(book);
-	}
-	public int generateUniqueBookId() {
-		int maxId = 0;
-		if (books != null) {
-			for (Book b : books) {
-				int id = b.getId();
-				if (id > maxId) {
-					maxId = id;
-				}
-			}
-		}
-		return maxId + 1;
 	}
 	
 	public void removeBook(int id) {
