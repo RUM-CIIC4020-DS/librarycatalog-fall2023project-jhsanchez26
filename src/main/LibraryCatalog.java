@@ -245,14 +245,14 @@ public class LibraryCatalog {
 		for (User user : users) {
 			float fees = user.calculateTotalFees();
 			if (fees>0) {
-				output += user.getName() + "\t\t\t\t\t$" + String.format("%.2f", fees) + "\n";
+				output += user.getName() + "\t\t\t\t\t$" + fees + "\n";
 				totalFees += fees;
 			}
 		}
 
 			
 		output += "====================================================\n";
-		output += "\t\t\t\tTOTAL DUE\t$" + String.format("%.2f",totalFees) + "\n\n\n";
+		output += "\t\t\t\tTOTAL DUE\t$" + totalFees + "\n\n\n";
 		output += "\n\n";
 		System.out.println(output);// You can use this for testing to see if the report is as expected.
 		
